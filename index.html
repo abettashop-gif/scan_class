@@ -176,6 +176,39 @@
             padding: 2rem;
             color: var(--muted-text-color);
         }
+
+        /* == Gaya untuk Bagian Peringatan yang Digabung == */
+        .warning-item {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-left: 5px solid #d32f2f; /* Garis merah di kiri sebagai tanda peringatan */
+            border-radius: 5px;
+            padding: 15px 20px;
+            margin-top: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .warning-title {
+            font-weight: bold;
+            color: #bf360c; /* Merah tua untuk judul */
+            display: block;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }
+        .reason-tag {
+            font-weight: 600;
+            color: #555;
+        }
+        .solution-tag {
+            font-weight: 600;
+            color: #2e7d32; /* Hijau untuk solusi */
+        }
+        .warning-item code {
+            background-color: #fce4ec; /* Latar pink muda */
+            color: #c2185b; /* Teks pink tua */
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: "Courier New", Courier, monospace;
+        }
     </style>
 </head>
 <body>
@@ -183,18 +216,17 @@
     <div class="container">
         <header class="header">
             <!-- Ganti dengan URL Logo Aplikasi "Scan Class" Anda -->
-            <img <img src="https://i.ibb.co.com/N64ZdsfJ/logo-web.png" alt="logo-web" alt="Logo Scan Class" class="app-logo">
+            <img src="https://i.ibb.co.com/N64ZdsfJ/logo-web.png" alt="logo-web" alt="Logo Scan Class" class="app-logo">
             <h1>Scan Class</h1>
             <p class="tagline">Solusi Absensi Digital Cerdas untuk Guru</p>
         </header>
 
-        <!-- ============================================= -->
-        <!-- Tombol Unduh Utama                            -->
-        <!-- ============================================= -->
+        <!-- (Bagian lain tidak berubah...) -->
+
 		<section class="main-buttons-container">
 			<h2 style="margin-bottom: 0;">Unduh Aplikasi</h2>
 			<!-- Tombol Unduh Aplikasi Guru Versi 2 (Terbaru) -->
-			<a href="https://drive.google.com/file/d/1_D_rOyhW-YefvrLQ5C5IV3mY2imVFzcV/view?usp=sharing" class="download-button">
+			<a href="https://www.mediafire.com/file/c6nb7e3qrn15zvh/Scan_Clas_v2.apk/file" class="download-button">
 				<i class="fas fa-chalkboard-teacher"></i> Unduh Aplikasi Guru (V.2)
 			</a>
 			<p style="text-align: center; margin-top: 0.5rem; color: var(--muted-text-color);">Lates Release Update V.2.</p>
@@ -214,7 +246,7 @@
 				<i class="fas fa-user-graduate"></i> Alternatif link Aplikasi Siswa (Min Android 10)
 			</a>
 			<p style="text-align: center; margin-top: 0.5rem; color: var(--muted-text-color);">Aplikasi untuk Orang Tua Siswa.</p>
-			<a href="https://www.mediafire.com/file/jxtjvalsog4xouq/izin_siswa_v_01.apk/file" class="download-button">
+			<a href="https://www.mediafire.com/file/38k74egcyx6wbbm/izin_siswa_v_01.apk/file" class="download-button">
 				<i class="fas fa-user-graduate"></i> Aplikasi Siswa (kompatibel Android 5+)
 			</a>
 			
@@ -236,9 +268,9 @@
 				<i class="fas fa-file-pdf"></i>Unduh Code App Script Data Izin
 			</a>
 		</section>
-        <!-- ======================================================= -->
-		<!-- Panduan Pengguna Baru (Versi Lengkap)                 -->
-		<!-- ======================================================= -->
+
+        <!-- (... Sisa konten lainnya sampai bagian Informasi Penting ...) -->
+		
 		<section class="section">
 			<h2>🚀 Panduan Lengkap untuk Pengguna Baru</h2>    <div class="info-box">
 				<h4>Selamat Datang di Scan Class!</h4>
@@ -391,30 +423,30 @@
 			<h2>🌟 Ekosistem Absensi Digital Lengkap</h2>
 			<p>Scan Class dirancang dengan fitur-fitur canggih yang saling terintegrasi, memberikan solusi absensi yang fleksibel dan efisien untuk setiap kebutuhan guru.</p>
 
-			<!-- Fitur Kunci -->
-			<div class="feature-grid">
-				<div class="feature-item">
-					<i class="fas fa-user-friends"></i>
+			<!-- Fitur Kunci (Styling dari file Anda, tapi saya tambahkan grid untuk kerapian) -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+                <div class="feature-item">
+					<i class="fas fa-user-friends" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
 					<h4>Dukungan Peran Ganda</h4>
 					<p>Mendaftar sebagai <strong>Wali Kelas</strong> untuk manajemen terpusat, atau sebagai <strong>Guru Mapel</strong> untuk fleksibilitas mengajar di banyak kelas dalam satu akun.</p>
 				</div>
 				<div class="feature-item">
-					<i class="fas fa-file-import"></i>
+					<i class="fas fa-file-import" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
 					<h4>Manajemen Siswa Cepat</h4>
 					<p>Tambah data siswa secara manual, atau percepat proses dengan fitur <strong>Impor & Ekspor</strong> data siswa menggunakan file template CSV.</p>
 				</div>
 				<div class="feature-item">
-					<i class="fas fa-file-import"></i>
+					<i class="fas fa-bell" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
 					<h4>Notifikasi Absensi</h4>
 					<p>Dengan mengaktifkan fitur online dan menghimbau orang tua siswa untuk menginstal Aplikasi Izin Siswa <strong>memberikan layanan pemantauan kehadiran (Notifikasi absensi real time)pada HP Orang tua siswa</strong>.</p>
 				</div>
 				<div class="feature-item">
-					<i class="fas fa-chart-line"></i>
+					<i class="fas fa-chart-line" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
 					<h4>Analisis Rekap Detail</h4>
 					<p>Tinjau data kehadiran siswa dalam tiga mode berbeda: <strong>Harian</strong> untuk edit status, <strong>Mingguan</strong>, dan <strong>Bulanan</strong> untuk melihat statistik lengkap.</p>
 				</div>
 				<div class="feature-item">
-					<i class="fas fa-file-excel"></i>
+					<i class="fas fa-file-excel" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
 					<h4>Ekspor Profesional</h4>
 					<p>Buat laporan matriks absensi dalam format Excel (<code>.xlsx</code>) yang siap cetak untuk periode Harian, Mingguan, Bulanan, hingga satu Semester penuh.</p>
 					<p>Buat laporan rekap data izin dapat diambil di google sheet (<code>.xlsx</code>).</p>
@@ -434,33 +466,68 @@
 				<p>Integrasi ini menciptakan alur administrasi yang transparan, efisien, dan mengurangi beban kerja guru secara signifikan.</p>
 			</div>
 
-			<!-- ✅✅✅ BAGIAN INI DIPERBARUI TOTAL ✅✅✅ -->
 			<!-- Sinkronisasi Google Sheets -->
 			<div class="info-box" style="margin-top: 2rem; border-color: #17a2b8;">
 				<h3 style="margin-top: 0; color: #0c5460;"><i class="fas fa-sync-alt"></i> Sinkronisasi Online dan Rekap izin ke Google Sheets</h3>
 				<p>Hubungkan aplikasi dengan Google Sheet untuk membuat laporan online yang dapat diakses dari mana saja. Fitur ini dirancang untuk akun <strong>Wali Kelas</strong>.</p>
 			</div>
+
 			<!-- Video Tutorial -->
 			<h2 style="margin-top: 3rem;">🎬 Video Tutorial</h2>
 			<p style="text-align:center;">Pelajari cara Membuat Master Data Siswa untuk import di Scan Class (CSV).</p>
-			<li><strong>Format Csv  </strong> menggunakan NISN,NAMA,JENISKELAMIN.</li>
+			<ul style="padding-left: 20px;"><li><strong>Format Csv  </strong> menggunakan NISN,NAMA,JENISKELAMIN.</li></ul>
 			<div class="video-container">
 				<iframe src="https://www.youtube.com/embed/-pwUjCfONNY?si=3B4VkHgd6FEBVDhM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 			</div>
 			<p style="text-align:center;">Pelajari cara Menghubungkan Scan Class ke google sheet melalui Apps Scrip Code.</p>
-			<li><strong>ini juga berlaku untuk Data izin. Code Apps Scrip tersedia menu Download </strong>
+			<ul style="padding-left: 20px;"><li><strong>ini juga berlaku untuk Data izin. Code Apps Scrip tersedia menu Download </strong></ul>
 			<div class="video-container">
 				<iframe src="https://www.youtube.com/embed/ibsJVs8RtoI?si=PcH-vFcsDysDyU7y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 			</div>
 			<p style="text-align:center;">Format hearder googlespreadsheets Data Izin untuk.</p>
-			<a href="https://ibb.co.com/rG5vVNgp"><img src="https://i.ibb.co.com/SXVJzG2m/Whats-App-Image-2025-11-23-at-10-57-59.jpg" alt="Whats-App-Image-2025-11-23-at-10-57-59" border="0"></a>
-			<a href="https://ibb.co.com/TBb1X714"><img src="https://i.ibb.co.com/PZ9MpPMc/Whats-App-Image-2025-11-23-at-10-57-36.jpg" alt="Whats-App-Image-2025-11-23-at-10-57-36" border="0"></a>
+			<a href="https://ibb.co.com/rG5vVNg"><img src="https://i.ibb.co/SXVJzG2/Whats-App-Image-2025-11-23-at-10-57-59.jpg" alt="Whats-App-Image-2025-11-23-at-10-57-59" border="0" style="max-width:100%; height:auto;"></a>
+			<a href="https://ibb.co.com/TBb1X71"><img src="https://i.ibb.co/PZ9MpPM/Whats-App-Image-2025-11-23-at-10-57-36.jpg" alt="Whats-App-Image-2025-11-23-at-10-57-36" border="0" style="max-width:100%; height:auto;"></a>
 		</section>
+
         <!-- ======================================================= -->
         <!-- Kebijakan & Syarat                                     -->
         <!-- ======================================================= -->
         <section class="section">
             <h2>Informasi Penting</h2>
+
+            <!-- ✅✅✅ KODE PERINGATAN DIMASUKKAN DI SINI ✅✅✅ -->
+            <details open> <!-- `open` agar tampil secara default -->
+                <summary>⚠️ Peringatan & Praktik Terbaik (Wajib Baca)</summary>
+                <div style="padding-top: 1rem;">
+                    <p>Untuk memastikan data Anda aman dan aplikasi berjalan lancar, mohon perhatikan poin-poin berikut. Mengabaikan peringatan ini dapat menyebabkan <strong>kehilangan data permanen.</strong></p>
+
+                    <div class="warning-item">
+                        <strong class="warning-title">1. JANGAN Uninstall Aplikasi Sebelum Mengekspor Rekap</strong>
+                        <p><span class="reason-tag">Mengapa?</span> Sebagian besar data absensi dan siswa disimpan secara <strong>lokal</strong> di perangkat. Jika Anda menghapus aplikasi, semua data tersebut akan <strong>HILANG SELAMANYA</strong>.</p>
+                        <p><span class="solution-tag">Solusi:</span> Sebelum mengganti perangkat, buka menu <code>Rekap Absensi</code>, pilih rentang waktu, lalu gunakan fitur <code>Ekspor ke PDF/Excel</code>. Simpan file hasil ekspor ke tempat aman.</p>
+                    </div>
+
+                    <div class="warning-item">
+                        <strong class="warning-title">2. JANGAN "Hapus Data" (Clear Data) dari Pengaturan Android</strong>
+                        <p><span class="reason-tag">Mengapa?</span> Aksi ini memiliki efek yang <strong>SAMA PERSIS</strong> dengan uninstall aplikasi. Semua data lokal akan terhapus.</p>
+                        <p><span class="solution-tag">Solusi:</span> Jika aplikasi lambat, coba "Hapus Cache" (Clear Cache) dulu. Jika masih bermasalah, ekspor data Anda sebelum mencoba langkah ini.</p>
+                    </div>
+
+                    <div class="warning-item">
+                        <strong class="warning-title">3. PASTIKAN Sinkronisasi Berhasil Setelah Membuat Perubahan Offline</strong>
+                        <p><span class="reason-tag">Mengapa?</span> Data baru seperti kelas atau siswa yang ditambahkan saat offline hanya ada di perangkat Anda. Jika Anda berganti perangkat sebelum sinkronisasi, data tersebut tidak ikut pindah.</p>
+                        <p><span class="solution-tag">Solusi:</span> Setelah membuat perubahan penting, pastikan terhubung ke internet yang stabil dan biarkan aplikasi berjalan sejenak untuk sinkronisasi.</p>
+                    </div>
+
+                    <div class="warning-item">
+                        <strong class="warning-title">4. UNTUK Wali Kelas: Pastikan Peran Akun Anda Benar</strong>
+                        <p><span class="reason-tag">Mengapa?</span> Hanya peran <code>Wali Kelas</code> yang dapat menambah/mengedit siswa, mengelola kelas, dan memproses surat izin. Jika Anda mendaftar sebagai "Guru Mapel", Anda tidak akan bisa mengakses fitur-fitur tersebut.</p>
+                        <p><span class="solution-tag">Solusi:</span> Saat mendaftar, pastikan Anda memilih peran yang benar. Jika terlanjur salah, hubungi admin atau buat akun baru.</p>
+                    </div>
+                </div>
+            </details>
+            <!-- ✅✅✅ AKHIR DARI BAGIAN YANG DIGABUNGKAN ✅✅✅ -->
+
             <details>
                 <summary>Kebijakan Privasi (Privacy Policy)</summary>
                 <div style="padding-top: 1rem;">
