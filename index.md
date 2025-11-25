@@ -54,7 +54,7 @@ layout: default
     }
     .app-logo {
         width: 100%;
-        max-width: 300px;
+        max-width: 100px;
         height: auto;
         margin-bottom: 1rem;
         border-radius: 22%;
