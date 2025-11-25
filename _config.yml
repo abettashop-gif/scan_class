@@ -1,1 +1,9 @@
+yml
+# File: _config.yml
+title: Scan Class
+description: Solusi Absensi Digital Cerdas untuk Guru.
 
+plugins:
+  - jekyll-remote-theme
+
+remote_theme: pages-themes/minimal
