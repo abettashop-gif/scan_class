@@ -53,11 +53,11 @@ layout: default
         border-bottom: 1px solid var(--border-color);
     }
     .app-logo {
-        width: 100%;
+        width: 50%;
         max-width: 100px;
         height: auto;
         margin-bottom: 1rem;
-        border-radius: 22%;
+        border-radius: 15%;
     }
     /* Menggunakan !important untuk memastikan gaya Anda yang menang atas tema */
     .container h1 { 
