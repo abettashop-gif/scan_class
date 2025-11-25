@@ -1,354 +1,150 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scan Class - Solusi Absensi Digital Cerdas</title>
-    <!-- Tambahkan Font Awesome untuk Ikon -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <style>
-        /* --- STYLING GLOBAL & PALET WARNA --- */
-        :root {
-            --primary-color: #007bff;
-            --primary-dark: #0056b3;
-            --secondary-color: #6c757d;
-            --secondary-dark: #5a6268;
-            --success-color: #28a745;
-            --danger-color: #dc3545;
-            --warning-color: #ffc107;
-            --info-color: #17a2b8;
-            
-            --background-color: #f8f9fa;
-            --surface-color: #ffffff;
-            --text-color: #343a40;
-            --muted-text-color: #6c757d;
-            --border-color: #dee2e6;
-            
-            --box-shadow: 0 8px 30px rgba(0,0,0,0.08);
-            --border-radius: 12px;
-            --border-radius-sm: 8px;
-        }
+---
+# Front Matter untuk Jekyll. Ini memberitahu Jekyll untuk menggunakan layout tema.
+layout: default
+---
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            line-height: 1.6; /* Sedikit lebih renggang untuk keterbacaan */
-            margin: 0;
-            background-color: var(--background-color);
-            color: var(--text-color);
-        }
+<!-- 
+    KODE DI BAWAH INI ADALAH KONTEN LENGKAP ANDA YANG TELAH DISESUAIKAN
+    UNTUK BEKERJA DI DALAM TEMA JEKYLL.
+-->
 
-        /* --- CONTAINER UTAMA & HEADER --- */
-        .container {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 1rem 2rem 2rem 2rem;
-            background: var(--surface-color);
-            border-radius: var(--border-radius);
-            box-shadow: var(--box-shadow);
-        }
-        .header {
-            text-align: center;
-            padding-bottom: 2rem;
-            border-bottom: 1px solid var(--border-color);
-        }
-        .app-logo {
-            width: 100%;
-            max-width: 300px; /* Disesuaikan agar lebih responsif */
-            height: auto;
-            margin-bottom: 1rem;
-            border-radius: 22%;
-        }
-        h1 {
-            font-size: 2.8rem;
-            color: #212529;
-            margin: 0;
-            font-weight: 700;
-        }
-        .tagline {
-            font-size: 1.25rem;
-            color: var(--muted-text-color);
-            margin-top: 0.5rem;
-        }
-
-        /* --- STYLING TOMBOL UNDUH --- */
-        .main-buttons-container {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem; /* Jarak antar grup tombol */
-            margin: 2rem auto;
-        }
-        .button-group {
-            display: flex;
-            flex-direction: column;
-            gap: 0.75rem; /* Jarak antar tombol dalam grup */
-            align-items: center;
-        }
-        .download-button {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            width: 95%;
-            max-width: 450px;
-            padding: 1rem;
-            color: #fff;
-            text-align: center;
-            text-decoration: none;
-            font-size: 1.15rem; /* Sedikit disesuaikan */
-            font-weight: bold;
-            border-radius: 10px;
-            transition: background-color 0.3s, transform 0.2s;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-        .download-button:hover {
-            transform: translateY(-3px);
-        }
-        .download-button.primary { background-color: var(--primary-color); }
-        .download-button.primary:hover { background-color: var(--primary-dark); }
-        .download-button.secondary { background-color: var(--secondary-color); }
-        .download-button.secondary:hover { background-color: var(--secondary-dark); }
-        .download-button.danger { background-color: var(--danger-color); }
-        .download-button.danger:hover { background-color: #c82333; }
-        .download-button.info { background-color: var(--info-color); }
-        .download-button.info:hover { background-color: #138496; }
-        .download-button .fas {
-            font-size: 1.3rem;
-        }
-        .group-title {
-            text-align: center;
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: var(--text-color);
-            margin: 1rem 0 0.5rem 0;
-        }
-        .group-subtitle {
-            text-align: center;
-            margin-top: 0;
-            margin-bottom: 1rem;
-            color: var(--muted-text-color);
-        }
-
-        /* --- STYLING KONTEN & SECTION --- */
-        .section {
-            margin-top: 3rem;
-            padding-top: 2rem;
-            border-top: 1px solid var(--border-color);
-        }
-        h2 {
-            text-align: center;
-            color: var(--text-color);
-            margin-bottom: 2rem;
-            font-size: 2rem;
-            font-weight: 600;
-        }
-        h3 {
-             color: #495057;
-             margin-top: 2.5rem;
-             margin-bottom: 1rem;
-             border-bottom: 2px solid var(--primary-color);
-             padding-bottom: 0.5rem;
-             display: inline-block;
-        }
-        h3 > .fas {
-            margin-right: 0.75rem;
-        }
-        .info-box {
-            background: #e9f5ff;
-            border-left: 5px solid var(--primary-color);
-            padding: 1rem 1.5rem;
-            margin: 1.5rem 0;
-            border-radius: var(--border-radius-sm);
-        }
-        .info-box h4 { margin-top: 0; }
-        .video-container {
-            position: relative;
-            overflow: hidden;
-            width: 100%;
-            padding-top: 56.25%; /* 16:9 Aspect Ratio */
-            margin: 1.5rem 0;
-            border-radius: var(--border-radius);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-        }
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-        details {
-            background-color: var(--surface-color); /* Berbeda dari body */
-            border: 1px solid var(--border-color);
-            border-radius: var(--border-radius);
-            padding: 1.25rem;
-            margin-top: 1rem;
-            transition: box-shadow 0.3s;
-        }
-        details[open] {
-             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-        }
-        summary {
-            font-weight: bold;
-            cursor: pointer;
-            color: var(--primary-color);
-            font-size: 1.1rem;
-            list-style: none; /* Hapus panah default */
-            position: relative;
-            padding-right: 25px;
-        }
-        summary::-webkit-details-marker { display: none; } /* Safari */
-        summary::after { /* Buat panah custom */
-            content: '\f078'; /* Chevron Down */
-            font-family: 'Font Awesome 6 Free';
-            font-weight: 900;
-            position: absolute;
-            right: 0;
-            top: 2px;
-            transition: transform 0.2s;
-        }
-        details[open] summary::after {
-            transform: rotate(180deg);
-        }
-        .footer {
-            text-align: center;
-            margin-top: 4rem;
-            padding: 2rem;
-            color: var(--muted-text-color);
-            font-size: 0.9rem;
-        }
-
-        /* --- Gaya untuk Bagian Peringatan --- */
-        .warning-item {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-left: 5px solid var(--danger-color);
-            border-radius: var(--border-radius-sm);
-            padding: 15px 20px;
-            margin-top: 1.5rem; /* Jarak lebih besar */
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-        }
-        .warning-title {
-            font-weight: bold;
-            color: #bf360c;
-            display: block;
-            margin-bottom: 8px;
-            font-size: 1.1em;
-        }
-        .reason-tag { font-weight: 600; color: #555; }
-        .solution-tag { font-weight: 600; color: var(--success-color); }
-        .warning-item code {
-            background-color: #fce4ec;
-            color: #c2185b;
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-family: "Courier New", Courier, monospace;
-        }
+<!-- 1. Impor Font Awesome & CSS Kustom Anda -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<style>
+    /* --- STYLING GLOBAL & PALET WARNA --- */
+    :root {
+        --primary-color: #007bff;
+        --primary-dark: #0056b3;
+        --secondary-color: #6c757d;
+        --secondary-dark: #5a6268;
+        --success-color: #28a745;
+        --danger-color: #dc3545;
+        --warning-color: #ffc107;
+        --info-color: #17a2b8;
         
-        /* --- Gaya untuk Fitur Grid --- */
-        .feature-grid {
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-            gap: 1.5rem;
-        }
-        .feature-item {
-            background: var(--background-color);
-            padding: 1.5rem;
-            border-radius: var(--border-radius-sm);
-            border: 1px solid var(--border-color);
-        }
-        .feature-item .fas {
-            font-size: 2rem; 
-            color: var(--primary-color); 
-            margin-bottom: 1rem;
-            display: block; /* Agar margin bottom berfungsi */
-        }
-        .feature-item h4 { margin-top: 0; font-size: 1.2rem; }
+        --background-color: #f8f9fa;
+        --surface-color: #ffffff;
+        --text-color: #343a40;
+        --muted-text-color: #6c757d;
+        --border-color: #dee2e6;
         
-        /* --- Utility & Lainnya --- */
-        ol, ul { padding-left: 20px; }
-        code {
-            background-color: #e9ecef;
-            padding: 2px 5px;
-            border-radius: 4px;
-            font-family: monospace;
-        }
-    </style>
-</head>
-<body>
+        --box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+        --border-radius: 12px;
+        --border-radius-sm: 8px;
+    }
 
-    <div class="container">
-        <header class="header">
-            <img src="https://i.ibb.co.com/N64ZdsfJ/logo-web.png" alt="Logo Scan Class" class="app-logo">
-            <h1>Scan Class</h1>
-            <p class="tagline">Solusi Absensi Digital Cerdas untuk Guru</p>
-        </header>
+    /* Override beberapa gaya tema 'minimal' agar tidak bentrok */
+    .main-content {
+        padding: 1rem; /* Atur padding agar container custom kita pas */
+    }
+    .main-content h1, .main-content h2, .main-content h3 {
+        margin-top: 1.5em;
+        margin-bottom: 0.5em;
+    }
+    
+    /* --- CONTAINER & HEADER KUSTOM ANDA --- */
+    .container {
+        max-width: 800px;
+        margin: 0 auto; /* Margin atas bawah 0, karena tema sudah memberi ruang */
+        padding: 1rem 2rem 2rem 2rem;
+        background: var(--surface-color);
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+    }
+    .header {
+        text-align: center;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid var(--border-color);
+    }
+    .app-logo {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        margin-bottom: 1rem;
+        border-radius: 22%;
+    }
+    .container h1 { /* Lebih spesifik untuk override tema */
+        font-size: 2.8rem !important;
+        color: #212529 !important;
+        margin: 0 !important;
+        font-weight: 700 !important;
+        border: none !important;
+        padding: 0 !important;
+    }
+    .tagline {
+        font-size: 1.25rem;
+        color: var(--muted-text-color);
+        margin-top: 0.5rem;
+    }
 
-        <section class="main-buttons-container">
-            <div class="button-group">
-                <h2 class="group-title">Unduh Aplikasi</h2>
-                <p class="group-subtitle">Pilih versi aplikasi yang sesuai untuk Anda.</p>
-                <a href="https://www.mediafire.com/file/1j7r19ufegurjh7/Scan_Class_V2_3.apk/file" class="download-button primary">
-                    <i class="fas fa-chalkboard-teacher"></i> Unduh Aplikasi Guru (V.2_3) #PingkatkanKeamanan
-                </a>
-				<details style="width: 95%; max-width: 450px; margin: 0.5rem auto; border-color: var(--warning-color); background-color: #fff9e6;">
-                    <summary style="color: #856404; font-weight: bold;">
-                        <i class="fas fa-exclamation-triangle"></i> WAJIB BACA: Panduan Update Pengguna Lama
-                    </summary>
-                    <div style="padding-top: 1rem; border-top: 1px solid #ffeeba; margin-top: 0.5rem;">
-                        <p style="font-size: 0.9rem; text-align: center; background-color: #e9f5ff; padding: 8px; border-radius: 6px;">
-                            <strong>Info:</strong> Jika Anda pengguna baru, Anda bisa mengabaikan bagian ini.
-                        </p>
-                        
-                        <h4 style="margin-top: 1rem; margin-bottom: 0.5rem; color: #333;">Pembaruan Penting Telah Tiba!</h4>
-                        <p>Untuk meningkatkan keamanan akun, versi baru ini menggunakan sistem login yang sepenuhnya berbeda. Akun lama Anda tidak bisa langsung digunakan.</p>
-                        
-                        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; color: #333;">Langkah yang HARUS Dilakukan:</h4>
-                        <ol style="padding-left: 20px; font-size: 0.95rem;">
-                            <li>
-                                <strong>(Opsional) Cadangkan Data Penting:</strong> Sebelum update, buka aplikasi lama, masuk ke menu "Rekap Absensi", lalu <strong>Ekspor ke PDF/Excel</strong> sebagai cadangan.
-                            </li>
-                            <li>
-                                <strong>Lakukan Update:</strong> Instal aplikasi versi baru ini. Jangan uninstall versi lama.
-                            </li>
-                            <li style="font-weight: bold; color: var(--danger-color);">
-                                <strong>Lakukan REGISTRASI ULANG (Wajib):</strong> Setelah update, buka aplikasi dan pilih menu <strong>"Daftar"</strong>. Anda BISA menggunakan kembali Email dan Password yang sama persis seperti sebelumnya.
-                            </li>
-                            <li>
-                                <strong>Login dengan Akun Baru:</strong> Setelah registrasi ulang berhasil, silakan login.
-                            </li>
-                        </ol>
-                        <p style="margin-top: 1rem;">Langkah ini hanya perlu dilakukan <strong>satu kali</strong>. Terima kasih atas pengertian Anda!</p>
-                    </div>
-                </details>
-                <a href="https://www.mediafire.com/file/e52a1c144rwpuup/app-release.apk/file" class="download-button primary">
-                    <i class="fas fa-chalkboard-teacher"></i> Unduh Aplikasi Guru (V.2_2) #update
-                </a>
-                <a href="https://drive.google.com/file/d/1p_ONtqnWb0HyW1B0jMk5K5A-lVgcaKNt/view?usp=sharing" class="download-button secondary">
-                    <i class="fas fa-history"></i> Unduh Aplikasi Guru (V.1 Lama)
-                </a>
-                 <a href="https://www.mediafire.com/file/ohym5l4jgeocvws/fix_izin_siswa_0.2.apk/file" class="download-button" style="background-color: var(--success-color);">
-                    <i class="fas fa-user-graduate"></i> Aplikasi Siswa/Orang Tua
-                </a>
-            </div>
-            
-            <div class="button-group">
-                <h2 class="group-title">Unduh File Pendukung</h2>
-                <p class="group-subtitle">Gunakan file-file ini untuk fitur impor dan sinkronisasi.</p>
-                <a href="https://drive.google.com/file/d/1eu-5L-mogqYmrzVdhNc8-aba8KDBXIWx/view?usp=sharing" class="download-button info">
-                    <i class="fas fa-file-csv"></i> Unduh Contoh File Import Siswa
-                </a>
-                <a href="https://docs.google.com/document/d/1kLX30K9OiZs2bmLGp5dR6zEA8XaBhG30/edit?usp=sharing&ouid=118214817902322932165&rtpof=true&sd=true" class="download-button danger">
-                    <i class="fab fa-google-drive"></i> Unduh Kode AppScript Sinkronisasi
-                </a>
-                <a href="https://docs.google.com/document/d/1ZQ-EedlKnkjC16PP7q9YUwNuaGH6VgNl/edit?usp=sharing&ouid=118214817902322932165&rtpof=true&sd=true" class="download-button danger">
-                    <i class="fab fa-google-drive"></i> Unduh Kode AppScript Data Izin
-                </a>
-            </div>
-        </section>
+    /* ... [SISA SEMUA KODE CSS ANDA YANG SUDAH ADA] ... */
+    .main-buttons-container{display:flex;flex-direction:column;gap:1rem;margin:2rem auto}.button-group{display:flex;flex-direction:column;gap:.75rem;align-items:center}.download-button{display:flex;align-items:center;justify-content:center;gap:12px;width:95%;max-width:450px;padding:1rem;color:#fff;text-align:center;text-decoration:none;font-size:1.15rem;font-weight:700;border-radius:10px;transition:background-color .3s,transform .2s;box-shadow:0 4px 15px rgba(0,0,0,.1)}.download-button:hover{transform:translateY(-3px)}.download-button.primary{background-color:var(--primary-color)}.download-button.primary:hover{background-color:var(--primary-dark)}.download-button.secondary{background-color:var(--secondary-color)}.download-button.secondary:hover{background-color:var(--secondary-dark)}.download-button.danger{background-color:var(--danger-color)}.download-button.danger:hover{background-color:#c82333}.download-button.info{background-color:var(--info-color)}.download-button.info:hover{background-color:#138496}.download-button .fas{font-size:1.3rem}.group-title{text-align:center;font-size:1.5rem;font-weight:600;color:var(--text-color);margin:1rem 0 .5rem}.group-subtitle{text-align:center;margin-top:0;margin-bottom:1rem;color:var(--muted-text-color)}.section{margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border-color)}.container h2{text-align:center;color:var(--text-color);margin-bottom:2rem;font-size:2rem;font-weight:600}.container h3{color:#495057;margin-top:2.5rem;margin-bottom:1rem;border-bottom:2px solid var(--primary-color);padding-bottom:.5rem;display:inline-block}.container h3>.fas{margin-right:.75rem}.info-box{background:#e9f5ff;border-left:5px solid var(--primary-color);padding:1rem 1.5rem;margin:1.5rem 0;border-radius:var(--border-radius-sm)}.info-box h4{margin-top:0}.video-container{position:relative;overflow:hidden;width:100%;padding-top:56.25%;margin:1.5rem 0;border-radius:var(--border-radius);box-shadow:0 6px 20px rgba(0,0,0,.1)}.video-container iframe{position:absolute;top:0;left:0;width:100%;height:100%}details{background-color:var(--surface-color);border:1px solid var(--border-color);border-radius:var(--border-radius);padding:1.25rem;margin-top:1rem;transition:box-shadow .3s}details[open]{box-shadow:0 4px 15px rgba(0,0,0,.05)}summary{font-weight:700;cursor:pointer;color:var(--primary-color);font-size:1.1rem;list-style:none;position:relative;padding-right:25px}summary::-webkit-details-marker{display:none}summary::after{content:'\f078';font-family:'Font Awesome 6 Free';font-weight:900;position:absolute;right:0;top:2px;transition:transform .2s}details[open] summary::after{transform:rotate(180deg)}.footer{text-align:center;margin-top:4rem;padding:2rem;color:var(--muted-text-color);font-size:.9rem}.warning-item{background-color:#fff;border:1px solid #ddd;border-left:5px solid var(--danger-color);border-radius:var(--border-radius-sm);padding:15px 20px;margin-top:1.5rem;box-shadow:0 2px 4px rgba(0,0,0,.05)}.warning-title{font-weight:700;color:#bf360c;display:block;margin-bottom:8px;font-size:1.1em}.reason-tag{font-weight:600;color:#555}.solution-tag{font-weight:600;color:var(--success-color)}.warning-item code{background-color:#fce4ec;color:#c2185b;padding:2px 6px;border-radius:4px;font-family:"Courier New",Courier,monospace}.feature-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem}.feature-item{background:var(--background-color);padding:1.5rem;border-radius:var(--border-radius-sm);border:1px solid var(--border-color)}.feature-item .fas{font-size:2rem;color:var(--primary-color);margin-bottom:1rem;display:block}.feature-item h4{margin-top:0;font-size:1.2rem}ol,ul{padding-left:20px}code{background-color:#e9ecef;padding:2px 5px;border-radius:4px;font-family:monospace}
+</style>
 
-		<section class="section">
-			<h2>🚀 Panduan Lengkap untuk Pengguna Baru</h2>
-			<div class="info-box">
+<!-- 2. Konten Utama Anda (sebelumnya di dalam <body>) -->
+<div class="container">
+    <header class="header">
+        <img src="https://i.ibb.co/N64ZdsfJ/logo-web.png" alt="Logo Scan Class" class="app-logo">
+        <h1>Scan Class</h1>
+        <p class="tagline">Solusi Absensi Digital Cerdas untuk Guru</p>
+    </header>
+
+    <section class="main-buttons-container">
+        <div class="button-group">
+            <h2 class="group-title">Unduh Aplikasi</h2>
+            <p class="group-subtitle">Pilih versi aplikasi yang sesuai untuk Anda.</p>
+            <a href="https://www.mediafire.com/file/1j7r19ufegurjh7/Scan_Class_V2_3.apk/file" class="download-button primary">
+                <i class="fas fa-chalkboard-teacher"></i> Unduh Aplikasi Guru (V.2_3) #PingkatkanKeamanan
+            </a>
+            <details style="width: 95%; max-width: 450px; margin: 0.5rem auto; border-color: var(--warning-color); background-color: #fff9e6;">
+                <summary style="color: #856404; font-weight: bold;">
+                    <i class="fas fa-exclamation-triangle"></i> WAJIB BACA: Panduan Update Pengguna Lama
+                </summary>
+                <div style="padding-top: 1rem; border-top: 1px solid #ffeeba; margin-top: 0.5rem;">
+                    <p style="font-size: 0.9rem; text-align: center; background-color: #e9f5ff; padding: 8px; border-radius: 6px;">
+                        <strong>Info:</strong> Jika Anda pengguna baru, Anda bisa mengabaikan bagian ini.
+                    </p>
+                    <h4 style="margin-top: 1rem; margin-bottom: 0.5rem; color: #333;">Pembaruan Penting Telah Tiba!</h4>
+                    <p>Untuk meningkatkan keamanan akun, versi baru ini menggunakan sistem login yang sepenuhnya berbeda. Akun lama Anda tidak bisa langsung digunakan.</p>
+                    <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; color: #333;">Langkah yang HARUS Dilakukan:</h4>
+                    <ol style="padding-left: 20px; font-size: 0.95rem;">
+                        <li><strong>(Opsional) Cadangkan Data Penting:</strong> Sebelum update, buka aplikasi lama, masuk ke menu "Rekap Absensi", lalu <strong>Ekspor ke PDF/Excel</strong> sebagai cadangan.</li>
+                        <li><strong>Lakukan Update:</strong> Instal aplikasi versi baru ini. Jangan uninstall versi lama.</li>
+                        <li style="font-weight: bold; color: var(--danger-color);"><strong>Lakukan REGISTRASI ULANG (Wajib):</strong> Setelah update, buka aplikasi dan pilih menu <strong>"Daftar"</strong>. Anda BISA menggunakan kembali Email dan Password yang sama persis seperti sebelumnya.</li>
+                        <li><strong>Login dengan Akun Baru:</strong> Setelah registrasi ulang berhasil, silakan login.</li>
+                    </ol>
+                    <p style="margin-top: 1rem;">Langkah ini hanya perlu dilakukan <strong>satu kali</strong>. Terima kasih atas pengertian Anda!</p>
+                </div>
+            </details>
+            <a href="https://www.mediafire.com/file/e52a1c144rwpuup/app-release.apk/file" class="download-button primary">
+                <i class="fas fa-chalkboard-teacher"></i> Unduh Aplikasi Guru (V.2_2) #update
+            </a>
+            <a href="https://drive.google.com/file/d/1p_ONtqnWb0HyW1B0jMk5K5A-lVgcaKNt/view?usp=sharing" class="download-button secondary">
+                <i class="fas fa-history"></i> Unduh Aplikasi Guru (V.1 Lama)
+            </a>
+             <a href="https://www.mediafire.com/file/ohym5l4jgeocvws/fix_izin_siswa_0.2.apk/file" class="download-button" style="background-color: var(--success-color);">
+                <i class="fas fa-user-graduate"></i> Aplikasi Siswa/Orang Tua
+            </a>
+        </div>
+        <div class="button-group">
+            <h2 class="group-title">Unduh File Pendukung</h2>
+            <p class="group-subtitle">Gunakan file-file ini untuk fitur impor dan sinkronisasi.</p>
+            <a href="https://drive.google.com/file/d/1eu-5L-mogqYmrzVdhNc8-aba8KDBXIWx/view?usp=sharing" class="download-button info">
+                <i class="fas fa-file-csv"></i> Unduh Contoh File Import Siswa
+            </a>
+            <a href="https://docs.google.com/document/d/1kLX30K9OiZs2bmLGp5dR6zEA8XaBhG30/edit?usp=sharing&ouid=118214817902322932165&rtpof=true&sd=true" class="download-button danger">
+                <i class="fab fa-google-drive"></i> Unduh Kode AppScript Sinkronisasi
+            </a>
+            <a href="https://docs.google.com/document/d/1ZQ-EedlKnkjC16PP7q9YUwNuaGH6VgNl/edit?usp=sharing&ouid=118214817902322932165&rtpof=true&sd=true" class="download-button danger">
+                <i class="fab fa-google-drive"></i> Unduh Kode AppScript Data Izin
+            </a>
+        </div>
+    </section>
+
+    <!-- ... (SELURUH SISA KONTEN SECTION ANDA) ... -->
+    <section class="section">
+        <h2>🚀 Panduan Lengkap untuk Pengguna Baru</h2>
+        <div class="info-box">
 				<h4>Selamat Datang di Scan Class!</h4>
 				<p>Ikuti panduan ini dari awal hingga akhir untuk menyiapkan dan mengaktifkan aplikasi Anda.</p>
 			</div>
@@ -417,11 +213,10 @@
 					Di dalam aplikasi, pilih <strong>"Minta Kunci Aktivasi"</strong>. Lengkapi formulir permintaan, kirim ke developer, lalu masukkan Kunci Aktivasi yang Anda terima untuk membuka kembali semua fitur premium.
 				</li>
 			</ol>
-		</section>
-
-		<section class="section">
-			<h2>👋 Panduan untuk Pengguna Lama (Update ke V.2)</h2>
-			<div class="info-box">
+    </section>
+    <section class="section">
+        <h2>👋 Panduan untuk Pengguna Lama (Update ke V.2)</h2>
+        <div class="info-box">
 				<h4>Terima Kasih Telah Setia Menggunakan Scan Class!</h4>
 				<p>Versi 2 membawa banyak pembaruan signifikan. Mohon ikuti panduan ini dengan saksama untuk memastikan semua fitur baru berjalan lancar.</p>
 			</div>
@@ -480,11 +275,10 @@
 					<p><strong>Ya, tentu saja.</strong> Kunci aktivasi Anda terikat dengan perangkat (HP) Anda. Selama Anda tidak mengganti perangkat, kunci aktivasi lama akan tetap valid setelah Anda memperbarui aplikasi.</p>
 				</div>
 			</details>
-		</section>
-
-		<section class="section">
-			<h2>🌟 Ekosistem Absensi Digital Lengkap</h2>
-			<p>Scan Class dirancang dengan fitur-fitur canggih yang saling terintegrasi, memberikan solusi absensi yang fleksibel dan efisien untuk setiap kebutuhan guru.</p>
+    </section>
+    <section class="section">
+        <h2>🌟 Ekosistem Absensi Digital Lengkap</h2>
+        <p>Scan Class dirancang dengan fitur-fitur canggih yang saling terintegrasi, memberikan solusi absensi yang fleksibel dan efisien untuk setiap kebutuhan guru.</p>
 
             <div class="feature-grid">
                 <div class="feature-item">
@@ -546,12 +340,10 @@
 			<p style="text-align:center;">Format hearder googlespreadsheets Data Izin untuk.</p>
 			<a href="https://ibb.co.com/rG5vVNg"><img src="https://i.ibb.co/SXVJzG2/Whats-App-Image-2025-11-23-at-10-57-59.jpg" alt="Contoh Header Google Sheet untuk Data Izin" border="0" style="max-width:100%; height:auto; border-radius: 8px; margin-top: 1rem;"></a>
 			<a href="https://ibb.co.com/TBb1X71"><img src="https://i.ibb.co/PZ9MpPM/Whats-App-Image-2025-11-23-at-10-57-36.jpg" alt="Contoh Header Google Sheet Lainnya" border="0" style="max-width:100%; height:auto; border-radius: 8px; margin-top: 1rem;"></a>
-		</section>
-
-        <section class="section">
-            <h2>Informasi Penting</h2>
-
-            <details open>
+	</section>
+    <section class="section">
+        <h2>Informasi Penting</h2>
+        <details open>
                 <summary>⚠️ Peringatan & Praktik Terbaik (Wajib Baca)</summary>
                 <div style="padding-top: 1rem;">
                     <p>Untuk memastikan data Anda aman dan aplikasi berjalan lancar, mohon perhatikan poin-poin berikut. Mengabaikan peringatan ini dapat menyebabkan <strong>kehilangan data permanen.</strong></p>
@@ -614,13 +406,9 @@
                     <p>Kami tidak bertanggung jawab atas kehilangan data akibat kerusakan perangkat, penghapusan aplikasi, atau faktor eksternal lainnya. Sangat disarankan untuk melakukan ekspor atau sinkronisasi data secara berkala sebagai cadangan mandiri.</p>
                 </div>
             </details>
-        </section>
+    </section>
+</div>
 
-    </div>
-
-    <footer class="footer">
-        <p>&copy; 2025 Scan Class - Dibuat oleh Adi Saputra</p>
-    </footer>
-
-</body>
-</html>
+<footer class="footer">
+    <p>&copy; 2025 Scan Class - Dibuat oleh Adi Saputra</p>
+</footer>
