@@ -129,7 +129,7 @@ layout: default
 <!-- 2. Konten Utama Anda (sebelumnya di dalam <body>) -->
 <div class="container">
     <header class="header">
-        <img src="https://i.ibb.co/N64ZdsfJ/logo-web.png" alt="Logo Scan Class" class="app-logo">
+        <img src="https://raw.githubusercontent.com/abettashop-gif/scan_class/main/logo-web.png" alt="Logo Scan Class" class="app-logo">
         <h1>Scan Class</h1>
         <p class="tagline">Solusi Absensi Digital Cerdas untuk Guru</p>
     </header>
