@@ -137,7 +137,10 @@ layout: default
     <section class="main-buttons-container">
         <div class="button-group">
             <h2 class="group-title">Unduh Aplikasi</h2>
-            <p class="group-subtitle">Pilih versi aplikasi yang sesuai untuk Anda.</p>
+            <p class="group-subtitle">Pilih versi aplikasi Terbaru untuk pengalaman Lebih baik.</p>
+            <a href="https://www.mediafire.com/file/g9gmlf62n3wlzg3/Scan_Class_v_2_5.apk/file" class="download-button primary">
+                <i class="fas fa-chalkboard-teacher"></i> Aplikasi Guru (V.2_5) #SomeBugFix
+            </a>
             <a href="https://www.mediafire.com/file/fi7iuhi2elmyam3/Scan_Class_2_4.apk/file" class="download-button primary">
                 <i class="fas fa-chalkboard-teacher"></i> Unduh Aplikasi Guru (V.2_4) #UpdateKeamanan
             </a>
