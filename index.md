@@ -140,21 +140,28 @@ layout: default
             <p class="group-subtitle">Pilih versi aplikasi Terbaru untuk pengalaman Lebih baik.</p>
             <a href="https://www.mediafire.com/file/8si4nckothpgzuf/Scan_class_2_4_1.apk/file" class="download-button primary">
                 <i class="fas fa-chalkboard-teacher"></i> Aplikasi Guru (V.2_4_1) #uPDATE
-                <h2>🚀 UPDATE TERBARU 2026</h2>
-                <h3>Ikuti panduan ini dari awal hingga akhir untuk menyiapkan dan mengaktifkan aplikasi Anda.</h3>
-                <h3>Changelog:</h3>
-                <p> 1. Update Keamanan akun.</p>
-                <p> 2. Menu baru: Jurnal pembelajaran (export langsung excel).</p>
-                <p> 3. Akun dan data tersimpan di server.</p>
-                <p> 4. Data tersimpan di server dapat di kembalikan ke HP jika HP hilang, ganti HP, reinstal aplikasi. </p>
-                <p> 5. Dll</p>
-                
-                <h3>Langkah-langkah.</h3>
-                <p> 1. Uninstal versi sebelumnya dan install versi ini scan class 2_4_1</p>
-                <p> 2. Registrasi ulang (sesuaikan tugas wali atau guru mapel), untuk SMP gunakan guru mapel jika mengampu banyak kelas. </p>
-                <p> 3. Untuk Url sycn absen dan izin itu pilihan main dipakai atau tidak. </p>
-                <p> 4. Sisanya sama seperti sebelumnya masukan data Siswa dan apa-apa yang diperlukan.</p>
-                <h3>mulai dari versi ini semi Online. Login harus online</h3> 
+                <div class="info-box" style="margin-top:1rem;">
+    <h3>🚀 UPDATE TERBARU 2026</h3>
+
+    <h4>Changelog:</h4>
+    <ul>
+        <li>Update keamanan akun</li>
+        <li>Menu baru: Jurnal Pembelajaran (ekspor langsung ke Excel)</li>
+        <li>Akun & data tersimpan di server</li>
+        <li>Data dapat dipulihkan saat ganti HP / instal ulang</li>
+        <li>Perbaikan & peningkatan lainnya</li>
+    </ul>
+
+    <h4>Langkah Instalasi:</h4>
+    <ol>
+        <li>Uninstall versi lama</li>
+        <li>Install Scan Class v2.4.1</li>
+        <li>Registrasi ulang (pilih Wali Kelas / Guru Mapel sesuai tugas)</li>
+        <li>Isi data siswa & pengaturan seperti biasa</li>
+    </ol>
+
+    <p><strong>Catatan:</strong> Mulai versi ini aplikasi bersifat <strong>semi-online</strong>. Login wajib menggunakan koneksi internet.</p>
+</div>
         </div>
             </a>
             <a href="https://www.mediafire.com/file/fi7iuhi2elmyam3/Scan_Class_2_4.apk/file" class="download-button primary">
