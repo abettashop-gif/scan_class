@@ -138,8 +138,24 @@ layout: default
         <div class="button-group">
             <h2 class="group-title">Unduh Aplikasi</h2>
             <p class="group-subtitle">Pilih versi aplikasi Terbaru untuk pengalaman Lebih baik.</p>
-            <a href="https://www.mediafire.com/file/g9gmlf62n3wlzg3/Scan_Class_v_2_5.apk/file" class="download-button primary">
-                <i class="fas fa-chalkboard-teacher"></i> Aplikasi Guru (V.2_5) #SomeBugFix
+            <a href="https://www.mediafire.com/file/8si4nckothpgzuf/Scan_class_2_4_1.apk/file" class="download-button primary">
+                <i class="fas fa-chalkboard-teacher"></i> Aplikasi Guru (V.2_4_1) #uPDATE
+                <h2>🚀 UPDATE TERBARU 2026</h2>
+                <h3>Ikuti panduan ini dari awal hingga akhir untuk menyiapkan dan mengaktifkan aplikasi Anda.</h3>
+                <h3>Changelog:</h3>
+                <p> 1. Update Keamanan akun.</p>
+                <p> 2. Menu baru: Jurnal pembelajaran (export langsung excel).</p>
+                <p> 3. Akun dan data tersimpan di server.</p>
+                <p> 4. Data tersimpan di server dapat di kembalikan ke HP jika HP hilang, ganti HP, reinstal aplikasi. </p>
+                <p> 5. Dll</p>
+                
+                <h3>Langkah-langkah.</h3>
+                <p> 1. Uninstal versi sebelumnya dan install versi ini scan class 2_4_1</p>
+                <p> 2. Registrasi ulang (sesuaikan tugas wali atau guru mapel), untuk SMP gunakan guru mapel jika mengampu banyak kelas. </p>
+                <p> 3. Untuk Url sycn absen dan izin itu pilihan main dipakai atau tidak. </p>
+                <p> 4. Sisanya sama seperti sebelumnya masukan data Siswa dan apa-apa yang diperlukan.</p>
+                <h3>mulai dari versi ini semi Online. Login harus online</h3> 
+        </div>
             </a>
             <a href="https://www.mediafire.com/file/fi7iuhi2elmyam3/Scan_Class_2_4.apk/file" class="download-button primary">
                 <i class="fas fa-chalkboard-teacher"></i> Unduh Aplikasi Guru (V.2_4) #UpdateKeamanan
