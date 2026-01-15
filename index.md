@@ -166,9 +166,11 @@ layout: default
                     <p style="margin-top: 1rem; font-size: 0.9rem;"><strong>Catatan Penting:</strong> Mulai versi ini, aplikasi bersifat <strong>semi-online</strong>. Login pertama kali wajib menggunakan koneksi internet. Akun dan data Anda kini terikat pada server, bukan lagi hanya di perangkat.</p>
                 </div>
             </details>
-            
+            <a href="https://www.mediafire.com/file/gjj5je33s9iwvpq/Izin_Siswa_V1_1.apk/file" class="download-button" style="background-color: var(--success-color);">
+                <i class="fas fa-user-graduate"></i> Aplikasi Siswa/Orang Tua V1.1 #LatesUpdate
+            </a>            
             <a href="https://www.mediafire.com/file/ohym5l4jgeocvws/fix_izin_siswa_0.2.apk/file" class="download-button" style="background-color: var(--success-color);">
-                <i class="fas fa-user-graduate"></i> Aplikasi Siswa/Orang Tua
+                <i class="fas fa-user-graduate"></i> Aplikasi Siswa/Orang Tua V0.2
             </a>
         </div>
         
