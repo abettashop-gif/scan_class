@@ -144,6 +144,25 @@ layout: default
 
             <details style="width: 95%; max-width: 450px; margin: 0.5rem auto; border-color: var(--warning-color); background-color: #fff9e6;">
                 <summary style="color: #856404; font-weight: bold;">
+                    <i class="fas fa-exclamation-triangle"></i> WAJIB BACA: Info Update V.2.6
+                </summary>
+                 <div style="padding-top: 1rem; border-top: 1px solid #ffeeba; margin-top: 0.5rem;">
+                    <h4 style="margin-top: 1rem; margin-bottom: 0.5rem; color: #333;">🚀 Changelog:</h4>
+                     <ul>
+                        <li>Perbaikan Struktur Data</li>
+                        <li>Menu baru: Profile Edit dan tema </li>
+                        <li>Perbaikan & peningkatan lainnya</li>
+                    </ul>
+                    <h4 style="margin-top: 1rem; margin-bottom: 0.5rem; color: #333;">Langkah Instalasi Pengguna Lama:</h4>
+                    <ol style="padding-left: 20px; font-size: 0.95rem;">
+                        <li><strong>Peringatan!!</strong> dari aplikasi.</li>
+                        <li>Untuk Pencegahan Hal yang tidak diinginkan Lakukan Export/sycnron semua data absen yang ada</li>
+                        <li>Jika Update tidak berhasil/error silahkan uninstal dan instal versi baru</li>
+                        <li>Jika ada masalah atau ide Silahkan laporkan menggunakan menu bantuan yang tersedia.</li>
+                    </ol>
+            
+                </div>
+                <summary style="color: #856404; font-weight: bold;">
                     <i class="fas fa-exclamation-triangle"></i> WAJIB BACA: Info Update V.2.4.1
                 </summary>
                 <div style="padding-top: 1rem; border-top: 1px solid #ffeeba; margin-top: 0.5rem;">
