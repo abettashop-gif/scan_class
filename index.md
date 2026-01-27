@@ -138,8 +138,8 @@ layout: default
             <h2 class="group-title">Unduh Aplikasi</h2>
             <p class="group-subtitle">Pilih versi aplikasi yang sesuai.</p>
             
-            <a href="https://www.mediafire.com/file/8si4nckothpgzuf/Scan_class_2_4_1.apk/file" class="download-button primary">
-                <i class="fas fa-chalkboard-teacher"></i> Aplikasi Guru (V.2.4.1) #TERBARU
+            <a href="https://www.mediafire.com/file/pyzs4dwdzhjwojq/Scan_Class_v_2_6.apk/file" class="download-button primary">
+                <i class="fas fa-chalkboard-teacher"></i> Aplikasi Guru (V.2.6) #TERBARU#27/01/26
             </a>
 
             <details style="width: 95%; max-width: 450px; margin: 0.5rem auto; border-color: var(--warning-color); background-color: #fff9e6;">
@@ -162,6 +162,9 @@ layout: default
                     </ol>
             
                 </div>
+                <a href="https://www.mediafire.com/file/8si4nckothpgzuf/Scan_class_2_4_1.apk/file" class="download-button primary">
+                    <i class="fas fa-chalkboard-teacher"></i> Aplikasi Guru (V.2.4.1) 
+                </a>
                 <summary style="color: #856404; font-weight: bold;">
                     <i class="fas fa-exclamation-triangle"></i> WAJIB BACA: Info Update V.2.4.1
                 </summary>
