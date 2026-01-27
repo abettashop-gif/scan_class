@@ -163,6 +163,7 @@ layout: default
             
                 </div>
             </details>
+            <details style="width: 95%; max-width: 450px; margin: 0.5rem auto; border-color: var(--warning-color); background-color: #fff9e6;">
                 <a href="https://www.mediafire.com/file/8si4nckothpgzuf/Scan_class_2_4_1.apk/file" class="download-button primary">
                     <i class="fas fa-chalkboard-teacher"></i> Aplikasi Guru (V.2.4.1) 
                 </a>
