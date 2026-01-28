@@ -138,7 +138,7 @@ layout: default
             <h2 class="group-title">Unduh Aplikasi</h2>
             <p class="group-subtitle">Pilih versi aplikasi yang sesuai.</p>
             
-            <a href="https://www.mediafire.com/file/pyzs4dwdzhjwojq/Scan_Class_v_2_6.apk/file" class="download-button primary">
+            <a href="https://www.mediafire.com/file/5fzpcs8y2jxr8o9/Scan_Class_2_6_270126.apk/file" class="download-button primary">
                 <i class="fas fa-chalkboard-teacher"></i> Aplikasi Guru (V.2.6) #TERBARU#27/01/26
             </a>
 
