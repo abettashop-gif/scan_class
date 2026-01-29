@@ -147,6 +147,7 @@ layout: default
                     <i class="fas fa-exclamation-triangle"></i> WAJIB BACA: Info Update V.2.6
                 </summary>
                  <div style="padding-top: 1rem; border-top: 1px solid #ffeeba; margin-top: 0.5rem;">
+                     <h4>SETELAH UPDATE SILAHKAN Logout dan login Kembali</h4>
                     <h4 style="margin-top: 1rem; margin-bottom: 0.5rem; color: #333;">🚀 Changelog:</h4>
                      <ul>
                         <li>Perbaikan Struktur Data</li>
